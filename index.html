@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testee</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" ></script> <!--blibioteca-->
+    <script src="js/script.js" defer></script>
+    
+
+</head>
+<body>
+   
+    </header>
+
+    <main>
+        <div id="content"> 
+        <section class="content">
+            <div class="form-container">
+                <h2>Preencha seus dados</h2>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required maxlength="11" pattern="\d{11}" title="O CPF deve conter 11 dígitos numéricos.">
+                    <!-- vai limitar a qntd de numeros a ser inserido no campo-->
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+
+                    <label for="arquivos">Anexar Arquivo:</label>
+                    <input type="file" name="arquivos" class="btn btn-success" accept="image/png, image/jpeg" multiple>
+
+                    <button type="submit" class="submit-btn">Enviar</button>
+                    <button id="generate-pdf" class="submit-btn"> Gerar pdf </button>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+</body>
+</html>
